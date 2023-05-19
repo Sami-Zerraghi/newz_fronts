@@ -1,0 +1,21 @@
+
+.articleContainer{
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    margin-bottom: 130px;
+}
+
+
+
+
+.articleHeader{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.divider{
+    border-bottom: 1px var(--yellow-color) solid;
+}
