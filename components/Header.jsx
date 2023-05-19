@@ -1,25 +1,28 @@
-import React from "react";
-import styles from "../styles/Header.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { DateTime } from "luxon";
+import React from 'react';
+import styles from '../styles/Header.module.css';
+import { DateTime } from 'luxon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 function Header() {
-  const date = DateTime.now().toFormat("MMMM dd yyyy");
+  const date = DateTime.now().toFormat('MMMM dd yyyy');
+
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <div>{date}</div>
         <h1 className={styles.title}>My News</h1>
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
       </div>
+
       <div className={styles.linkContainer}>
-        <a href="#" className={styles.link}>
+        <Link href="/" className={styles.link}>
           Articles
-        </a>
-        <a href="#" className={styles.link}>
+        </Link>
+        <Link href="#" className={styles.link}>
           Bookmarks
-        </a>
+        </Link>
       </div>
     </header>
   );
