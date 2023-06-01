@@ -18,7 +18,7 @@ function Article(props) {
       // si l'utilisateur n'est pas connecté, on ne fait rien et on sort de la fonction
       return;
     }
-    fetch(`https://my-news-backend-95.vercel.app//users/canBookmark/${user.token}`) // on vérifie si l'utilisateur peut ajouter un article en favoris
+    fetch(`https://my-news-backend-23-beta.vercel.app/users/canBookmark/${user.token}`) // on vérifie si l'utilisateur peut ajouter un article en favoris
       .then((res) => res.json())
       .then((data) => {
         if (data.result && data.canBookmark) {

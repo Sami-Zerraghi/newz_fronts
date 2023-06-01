@@ -24,7 +24,7 @@ function Header() {
   const [signinPassword, setSigninPassword] = useState('');
 
   const handleSignup = () => {
-    fetch('https://my-news-backend-95.vercel.app//users/signup', {
+    fetch('https://my-news-backend-23-beta.vercel.app/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
